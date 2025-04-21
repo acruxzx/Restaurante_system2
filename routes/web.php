@@ -58,7 +58,7 @@ Route::middleware('auth')->group(function () {
     
     // --- Producto-Pedidos ---
     Route::resource('producto-pedidos', ProductoPedidoController::class);
-    Route::get('/producto-pedidos/create/{pedido}', [ProductoPedidoController::class, 'create'])->name('producto-pedidos.create');
+    Route::get('/producto-pedidos/create/{pedido}', [ProductoPedidoController::class, 'create'])->name('Producto-pedidos.create');
     Route::get('/producto-pedidos/show/{pedido}', [ProductoPedidoController::class, 'show'])->name('producto-pedidos.show');
     Route::delete('producto-pedidos/{producto_pedido}', [ProductoPedidoController::class, 'destroy'])->name('producto-pedidos.destroy');
 
