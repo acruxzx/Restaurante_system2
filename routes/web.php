@@ -50,15 +50,15 @@ Route::middleware('auth')->group(function () {
     Route::resource('cajas', CajaController::class);
 
     // --- Pedidos ---
-    Route::resource('pedidos', PedidoController::class);
+   Route::resource('pedidos', PedidoController::class)->except(['show']);
     Route::resource('tp-pedidos', TpPedidoController::class);
     Route::resource('estado-pedidos', EstadoPedidoController::class);
     Route::get('/pedidos/{id}', [PedidoController::class, 'show'])->name('pedidos.Show');
     Route::post('/pedidos/completar/{id}', [PedidoController::class, 'completar'])->name('pedidos.completar');
     
     // --- Producto-Pedidos ---
-    Route::resource('producto-pedidos', ProductoPedidoController::class);
-    Route::get('/producto-pedidos/create/{pedido}', [ProductoPedidoController::class, 'create'])->name('Producto-pedidos.create');
+    Route::resource('producto-pedidos', ProductoPedidoController::class)->except(['show', 'create']);
+    Route::get('/producto-pedidos/create/{pedido}', [ProductoPedidoController::class, 'create'])->name('producto-pedidos.create');
     Route::get('/producto-pedidos/show/{pedido}', [ProductoPedidoController::class, 'show'])->name('producto-pedidos.show');
     Route::delete('producto-pedidos/{producto_pedido}', [ProductoPedidoController::class, 'destroy'])->name('producto-pedidos.destroy');
 
@@ -74,7 +74,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/ventas/create/{pedidoId}', [VentaController::class, 'create'])->name('ventas.create');
     
     // --- Clientes ---
-    Route::resource('clientes', ClienteController::class);
+    Route::resource('clientes', ClienteController::class)->except(['show']);
     Route::get('/clientes/{id}', [ClienteController::class, 'show'])->name('clientes.show');
 
     // --- Tamaños ---
