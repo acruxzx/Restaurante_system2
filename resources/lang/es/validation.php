@@ -1,0 +1,56 @@
+<?php
+
+return [
+    'accepted'             => 'Debe aceptar el :attribute.',
+    'active_url'           => 'El :attribute no es una URL válida.',
+    'after'                => 'El :attribute debe ser una fecha posterior a :date.',
+    'alpha'                => 'El :attribute solo puede contener letras.',
+    'alpha_dash'           => 'El :attribute solo puede contener letras, números, guiones y guiones bajos.',
+    'alpha_num'            => 'El :attribute solo puede contener letras y números.',
+    'array'                => 'El :attribute debe ser un arreglo.',
+    'before'               => 'El :attribute debe ser una fecha anterior a :date.',
+    'between'              => [
+        'numeric' => 'El :attribute debe estar entre :min y :max.',
+        'file'    => 'El :attribute debe pesar entre :min y :max kilobytes.',
+        'string'  => 'El :attribute debe tener entre :min y :max caracteres.',
+        'array'   => 'El :attribute debe tener entre :min y :max elementos.',
+    ],
+    'boolean'              => 'El campo :attribute debe ser verdadero o falso.',
+    'confirmed'            => 'La confirmación de :attribute no coincide.',
+    'date'                 => 'El :attribute no es una fecha válida.',
+    'date_format'          => 'El :attribute no corresponde al formato :format.',
+    'different'            => 'El :attribute y :other deben ser diferentes.',
+    'digits'               => 'El :attribute debe tener :digits dígitos.',
+    'digits_between'       => 'El :attribute debe tener entre :min y :max dígitos.',
+    'dimensions'           => 'El :attribute tiene dimensiones de imagen no válidas.',
+    'distinct'             => 'El campo :attribute tiene un valor duplicado.',
+    'email'                => 'El :attribute debe ser una dirección de correo válida.',
+    'exists'               => 'El :attribute seleccionado es inválido.',
+    'file'                 => 'El :attribute debe ser un archivo.',
+    'filled'               => 'El campo :attribute es obligatorio.',
+    'gt'                   => [
+        'numeric' => 'El :attribute debe ser mayor que :value.',
+        'file'    => 'El :attribute debe pesar más que :value kilobytes.',
+        'string'  => 'El :attribute debe tener más de :value caracteres.',
+        'array'   => 'El :attribute debe tener más de :value elementos.',
+    ],
+    'gte'                  => [
+        'numeric' => 'El :attribute debe ser mayor o igual que :value.',
+        'file'    => 'El :attribute debe pesar más o igual que :value kilobytes.',
+        'string'  => 'El :attribute debe tener más o igual que :value caracteres.',
+        'array'   => 'El :attribute debe tener :value elementos o más.',
+    ],
+    // Puedes seguir añadiendo más traducciones según tus necesidades
+    'required'             => 'El campo :attribute es obligatorio.',
+    'size'                 => [
+        'numeric' => 'El :attribute debe ser de :size.',
+        'file'    => 'El :attribute debe pesar :size kilobytes.',
+        'string'  => 'El :attribute debe tener :size caracteres.',
+        'array'   => 'El :attribute debe tener :size elementos.',
+    ],
+    'string'               => 'El :attribute debe ser una cadena de texto.',
+    'timezone'             => 'El :attribute debe ser una zona horaria válida.',
+    'unique'               => 'El :attribute ya ha sido registrado.',
+    'url'                  => 'El formato de :attribute no es válido.',
+    // Y más...
+];
