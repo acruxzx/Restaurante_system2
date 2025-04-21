@@ -53,7 +53,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('pedidos', PedidoController::class);
     Route::resource('tp-pedidos', TpPedidoController::class);
     Route::resource('estado-pedidos', EstadoPedidoController::class);
-    Route::get('/pedidos/{id}', [PedidoController::class, 'show'])->name('pedidos.show');
+    Route::get('/pedidos/{id}', [PedidoController::class, 'show'])->name('pedidos.Show');
     Route::post('/pedidos/completar/{id}', [PedidoController::class, 'completar'])->name('pedidos.completar');
     
     // --- Producto-Pedidos ---
