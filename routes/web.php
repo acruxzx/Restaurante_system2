@@ -23,14 +23,6 @@ use App\Http\Controllers\CierreCajaController;
 use App\Http\Controllers\FacturaController;
 use Illuminate\Support\Facades\Artisan;
 
-Route::get('/run-migrations', function () {
-    try {
-        Artisan::call('migrate', ['--force' => true]);
-        return '✅ Migraciones ejecutadas correctamente.';
-    } catch (\Exception $e) {
-        return '❌ Error al ejecutar migraciones: ' . $e->getMessage();
-    }
-});
 
 
 Route::get('/', function () {
