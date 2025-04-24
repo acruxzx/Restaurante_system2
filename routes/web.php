@@ -24,6 +24,13 @@ use App\Http\Controllers\FacturaController;
 use Illuminate\Support\Facades\Artisan;
 
 
+Route::get('/run-migrations', function () {
+    Artisan::call('migrate', [
+        '--force' => true,
+    ]);
+    return 'Migraciones ejecutadas.';
+});
+
 
 Route::get('/', function () {
     return view('welcome');
